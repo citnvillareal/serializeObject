@@ -1,2 +1,231 @@
 # serializeArrayToJson
 This jquery plugin will map the serialize array data to JSON format.
+
+
+
+First Usage 
+
+	$( "form" ).serializeArrayToJson();
+
+
+
+Second Usage
+
+	var rFormat = {
+		id: 0,
+		name: "John Doe"
+	};
+
+	$( "form" ).serializeArrayToJson( { requiredFormat: rFormat } );
+
+
+
+Example 01
+
+	<form>
+		<input type="text" name="txt01" value="Text 01" />
+		<input type="text" name="txt02" value="Text 02" />
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<script>
+		( function( $ ){
+			$( document ).ready( function(){
+				$( "form" ).submit( function( e ) {
+					e.preventDefault();
+
+					var jsonObject = $( this ).serializeArrayToJson();
+					console.log( jsonObject );
+				} );
+			} );
+		} )( jQuery );
+	</script>
+
+Console Output 01
+
+	Object {
+		txt01: "Text 01",
+		txt02: "Text 02"
+	}
+
+
+
+Example 02
+
+	<form>
+		<input type="text" name="txt01[]" value="Text 01" />
+		<input type="text" name="txt01[]" value="Text 02" />
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<script>
+		( function( $ ){
+			$( document).ready( function(){
+				$( "form" ).submit( function( e ) {
+					e.preventDefault();
+
+					var jsonObject = $( this ).serializeArrayToJson();
+					console.log( jsonObject );
+				} );
+			} );
+		} )( jQuery );
+	</script>
+
+Console Output 02
+
+	Object {
+		txt01: Array(2) {
+			0: "Text 01",
+			1: "Text 02"
+		}
+	}
+
+
+
+Example 03
+
+	<form>
+		<input type="text" name="txt01[name][]" value="Text 01" />
+		<input type="text" name="txt01[name][]" value="Text 02" />
+
+		<input type="text" name="txt01[phone][]" value="000001" />
+		<input type="text" name="txt01[phone][]" value="000002" />
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<script>
+		( function( $ ){
+			$( document ).ready( function(){
+				$( "form" ).submit( function( e ) {
+					e.preventDefault();
+
+					var jsonObject = $( this ).serializeArrayToJson();
+					console.log( jsonObject );
+				} );
+			} );
+		} )( jQuery );
+	</script>
+
+Console Output 03
+
+	Object 
+	{
+		txt01: Object 
+		{
+			name: Array()
+			{
+				0: Text 01
+				1: Text 02
+			},
+			
+			phone: Array()
+			{
+				0: 000001
+				1: 000002
+			}
+		}
+	}
+
+
+
+Example 04
+
+	<form>
+		<input type="text" name="txt01[][name]" value="Text 01" />
+		<input type="text" name="txt01[][phone]" value="000001" />
+
+		<input type="text" name="txt01[][name]" value="Text 02" />
+		<input type="text" name="txt01[][phone]" value="000002" />
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<script>
+		( function( $){
+			$( document ).ready( function(){
+				$( "form" ).submit( function( e ) {
+					e.preventDefault();
+
+					var jsonObject = $( this ).serializeArrayToJson();
+					console.log( jsonObject );
+				} );
+			} );
+		} )( jQuery );
+	</script>
+
+Console Output 04
+
+	Object 
+	{
+		txt01: Array(2) 
+		{
+			0: Object
+			{
+				name: Text 01
+				phone: 000001
+			},
+			
+			1: Object
+			{
+				name: Text 02
+				phone: 000002
+			}
+		}
+	}
+
+
+
+Example 05
+
+	<form>
+		<input type="text" name="txt01[][name]" value="Text 01" />
+		<input type="text" name="txt01[][phone]" value="000001" />
+
+		<input type="text" name="txt01[][name]" value="Text 02" />
+		<input type="text" name="txt01[][phone]" value="000002" />
+
+		<input type="submit" value="Submit" />
+	</form>
+
+	<script>
+		(function( $ ){
+			$( document ).ready( function(){
+				$( "form" ).submit( function( e ) {
+					e.preventDefault();
+
+					var reqFormat = {
+						id: 0,
+						company: "ACN"
+					}; 
+
+					var jsonObject = $( this ).serializeArrayToJson( { requiredFormat: reqFormat } );
+					console.log(jsonObject);
+				} );
+			} );
+		})( jQuery );
+	</script>
+
+Console Output 05
+
+	Object 
+	{
+		id: 0,
+		company: "ACN",
+		txt01: Array(2) 
+		{
+			0: Object
+			{
+				name: Text 01
+				phone: 000001
+			},
+			
+			1: Object
+			{
+				name: Text 02
+				phone: 000002
+			}
+		}
+	}
