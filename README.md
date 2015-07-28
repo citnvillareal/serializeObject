@@ -1,15 +1,28 @@
 # serializeArrayToJson
-This jquery plugin will map the serialize array data to JSON format.
+This jquery plugin will map the serialized form data array to JSON format.
 
 
 
-First Usage 
+## Dependency
+
+	1. (jquery)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js] library.
+
+
+
+## To Get Started
+
+	1. import the (jquery.js)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js] library.
+	2. import the (jquery.serializeArrayToJson.js)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery.serializeArrayToJson.js] file. 
+
+
+
+### First Usage 
 
 	$( "form" ).serializeArrayToJson();
 
 
 
-Second Usage
+### Second Usage
 
 	var rFormat = {
 		id: 0,
@@ -20,7 +33,7 @@ Second Usage
 
 
 
-Example 01
+### Example 01
 
 	<form>
 		<input type="text" name="txt01" value="Text 01" />
@@ -42,7 +55,7 @@ Example 01
 		} )( jQuery );
 	</script>
 
-Console Output 01
+### Console Output 01
 
 	Object {
 		txt01: "Text 01",
@@ -51,7 +64,7 @@ Console Output 01
 
 
 
-Example 02
+### Example 02
 
 	<form>
 		<input type="text" name="txt01[]" value="Text 01" />
@@ -73,7 +86,7 @@ Example 02
 		} )( jQuery );
 	</script>
 
-Console Output 02
+### Console Output 02
 
 	Object {
 		txt01: Array(2) {
@@ -84,7 +97,7 @@ Console Output 02
 
 
 
-Example 03
+### Example 03
 
 	<form>
 		<input type="text" name="txt01[name][]" value="Text 01" />
@@ -109,7 +122,7 @@ Example 03
 		} )( jQuery );
 	</script>
 
-Console Output 03
+### Console Output 03
 
 	Object 
 	{
@@ -131,7 +144,7 @@ Console Output 03
 
 
 
-Example 04
+### Example 04
 
 	<form>
 		<input type="text" name="txt01[][name]" value="Text 01" />
@@ -156,7 +169,7 @@ Example 04
 		} )( jQuery );
 	</script>
 
-Console Output 04
+### Console Output 04
 
 	Object 
 	{
@@ -178,7 +191,7 @@ Console Output 04
 
 
 
-Example 05
+### Example 05
 
 	<form>
 		<input type="text" name="txt01[][name]" value="Text 01" />
@@ -208,7 +221,7 @@ Example 05
 		})( jQuery );
 	</script>
 
-Console Output 05
+### Console Output 05
 
 	Object 
 	{
