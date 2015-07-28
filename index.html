@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Serialize Array to Json Object</title>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="jquery.serializeArrayToJson.js"></script>
+</head>
+<body>
+	<form>
+		<select name="select_multiple[]" multiple>
+			<option>opt 1</option>
+			<option>opt 2</option>
+			<option>opt 3</option>
+		</select><br/>
+
+		<input type="checkbox" name="check[]" value="1" />true<br/>
+		<input type="checkbox" name="check[]" value="0" />false<br/>
+
+
+		<input type="radio" name="radio" value="1" />true<br/>
+		<input type="radio" name="radio" value="0" />false<br/>
+
+		<textarea name="textarea">test</textarea>
+
+		<input type="hidden" name="individualid" value="1009">
+		<input type="hidden" name="jobseeker[][profiletitle]" value="Profile Title">
+		<input type="hidden" name="jobseeker[][aboutme]" value="About Me">
+		<input type="hidden" name="jobseeker[][worktype]" value="Internship/Trainee">
+
+
+		<input type="hidden" name="reference[][dup_interest_id]" value="4000000018">
+		<input type="hidden" name="reference[][dup_interest_name]" value="Badminton">
+		<input type="hidden" name="reference[][dup_interest_rating]" value="1">
+		<input type="hidden" name="reference[][flag]" value="E">
+
+		<input type="hidden" name="reference[][dup_interest_id]" value="4000000019">
+		<input type="hidden" name="reference[][dup_interest_name]" value="Boxing">
+		<input type="hidden" name="reference[][dup_interest_rating]" value="1">
+		<input type="hidden" name="reference[][flag]" value="E">
+
+
+		<input type="hidden" name="jobseeker1[][profiletitle]" value="Profile Title">
+		<input type="hidden" name="jobseeker1[][aboutme]" value="About Me">
+		<input type="hidden" name="jobseeker1[][worktype]" value="Internship/Trainee">
+
+
+		<input type="hidden" name="reference1[dup_interest_id][]" value="4000000018">
+		<input type="hidden" name="reference1[dup_interest_name][]" value="Badminton">
+		<input type="hidden" name="reference1[dup_interest_rating][]" value="1">
+		<input type="hidden" name="reference1[flag][]" value="E">
+
+		<input type="hidden" name="reference1[dup_interest_id][]" value="4000000019">
+		<input type="hidden" name="reference1[dup_interest_name][]" value="Boxing">
+		<input type="hidden" name="reference1[dup_interest_rating][]" value="1">
+		<input type="hidden" name="reference1[][flag]" value="E">
+
+		<br/><br/><input type="submit">
+	</form>
+
+
+	<div id="result" style="border: 1px solid #ccc; margin: 20px;padding:20px;"></div>
+		
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("form").submit(function(event){
+				event.preventDefault();				
+
+				console.log($(this).serializeArrayToJson());
+			});
+
+			console.log($("form").serializeArrayToJson());
+		});
+	</script>
+</body>
+</html>
