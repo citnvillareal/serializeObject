@@ -5,14 +5,14 @@ This jquery plugin will map the serialized form data array to JSON format.
 
 ## Dependency
 
-	1. (jquery)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js] library.
+	1. [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js) library.
 
 
 
 ## To Get Started
 
-	1. import the (jquery.js)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js] library.
-	2. import the (jquery.serializeArrayToJson.js)[https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery.serializeArrayToJson.js] file. 
+	1. import the [jquery.js](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js] library.
+	2. import the [jquery.serializeArrayToJson.js](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery.serializeArrayToJson.js) plugin. 
 
 
 
@@ -55,7 +55,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		} )( jQuery );
 	</script>
 
-### Console Output 01
+### Example 01: Console Output
 
 	Object {
 		txt01: "Text 01",
@@ -86,7 +86,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		} )( jQuery );
 	</script>
 
-### Console Output 02
+### Example 02: Console Output
 
 	Object {
 		txt01: Array(2) {
@@ -122,7 +122,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		} )( jQuery );
 	</script>
 
-### Console Output 03
+### Example 03: Console Output
 
 	Object 
 	{
@@ -169,7 +169,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		} )( jQuery );
 	</script>
 
-### Console Output 04
+### Example 04: Console Output
 
 	Object 
 	{
@@ -221,7 +221,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		})( jQuery );
 	</script>
 
-### Console Output 05
+### Example 05: Console Output
 
 	Object 
 	{
