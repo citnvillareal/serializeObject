@@ -4,13 +4,13 @@ This jquery plugin will map the serialized form data array to JSON format.
 
 
 ##### Dependency
-1. [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js) library.
+1. [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery-1.11.3.min.js) library.
 
 
 
 ##### To Get Started
-1. import the [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery-1.11.3.min.js) library.
-2. import the [jquery.serializeArrayToJson.js](https://github.com/citnvillareal/serializeArrayToJson/blob/master/jquery.serializeArrayToJson.js) plugin. 
+1. import the [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery-1.11.3.min.js) library.
+2. import the [jquery.serializeArrayToJson.js](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery.serializeArrayToJson.js) plugin. 
 
 
 
