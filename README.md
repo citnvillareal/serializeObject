@@ -1,21 +1,21 @@
-# serializeArrayToJson
+# serializeObject
 This jquery plugin will map the serialized form data array to JSON format.
 
 
 
 ##### Dependency
-1. [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery-1.11.3.min.js) library.
+1. [jquery](https://github.com/citnvillareal/serializeObject/blob/master/js/jquery-1.11.3.min.js) library.
 
 
 
 ##### To Get Started
-1. import the [jquery](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery-1.11.3.min.js) library.
-2. import the [jquery.serializeArrayToJson.js](https://github.com/citnvillareal/serializeArrayToJson/blob/master/js/jquery.serializeArrayToJson.js) plugin. 
+1. import the [jquery](https://github.com/citnvillareal/serializeObject/blob/master/js/jquery-1.11.3.min.js) library.
+2. import the [jquery.serializeObject.js](https://github.com/citnvillareal/serializeObject/blob/master/js/jquery.serializeObject.js) plugin. 
 
 
 
 ##### First Usage 
-	$( "form" ).serializeArrayToJson();
+	$( "form" ).serializeObject();
 
 
 
@@ -25,7 +25,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 		name: "John Doe"
 	};
 
-	$( "form" ).serializeArrayToJson( { requiredFormat: rFormat } );
+	$( "form" ).serializeObject( { requiredFormat: rFormat } );
 
 
 
@@ -43,7 +43,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 				$( "form" ).submit( function( e ) {
 					e.preventDefault();
 
-					var jsonObject = $( this ).serializeArrayToJson();
+					var jsonObject = $( this ).serializeObject();
 					console.log( jsonObject );
 				} );
 			} );
@@ -72,7 +72,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 				$( "form" ).submit( function( e ) {
 					e.preventDefault();
 
-					var jsonObject = $( this ).serializeArrayToJson();
+					var jsonObject = $( this ).serializeObject();
 					console.log( jsonObject );
 				} );
 			} );
@@ -106,7 +106,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 				$( "form" ).submit( function( e ) {
 					e.preventDefault();
 
-					var jsonObject = $( this ).serializeArrayToJson();
+					var jsonObject = $( this ).serializeObject();
 					console.log( jsonObject );
 				} );
 			} );
@@ -151,7 +151,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 				$( "form" ).submit( function( e ) {
 					e.preventDefault();
 
-					var jsonObject = $( this ).serializeArrayToJson();
+					var jsonObject = $( this ).serializeObject();
 					console.log( jsonObject );
 				} );
 			} );
@@ -201,7 +201,7 @@ This jquery plugin will map the serialized form data array to JSON format.
 						company: "ACN"
 					}; 
 
-					var jsonObject = $( this ).serializeArrayToJson( { requiredFormat: reqFormat } );
+					var jsonObject = $( this ).serializeObject( { requiredFormat: reqFormat } );
 					console.log(jsonObject);
 				} );
 			} );

@@ -2,7 +2,7 @@
 <head>
 	<title>Serialize Array to Json Object</title>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.serializeArrayToJson.js"></script>
+	<script type="text/javascript" src="js/jquery.serializeObject.js"></script>
 </head>
 <body>
 	<form>
@@ -90,7 +90,7 @@
 		$(document).ready(function(){
 			$("form").submit(function(event){
 				event.preventDefault();				
-				var jsonObject = $(this).serializeArrayToJson();
+				var jsonObject = $(this).serializeObject();
 				console.log(jsonObject);
 				$("#result").html(JSON.stringify(jsonObject));
 			});
