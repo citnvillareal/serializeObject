@@ -1,5 +1,5 @@
 # serializeObject
-This jquery plugin will map the serialized form data array to JSON format.
+This jquery plugin will map the serialized form data array to JSON Object.
 
 
 
