@@ -5,7 +5,7 @@
 	<script type="text/javascript" src="js/jquery.serializeObject.min.js"></script>
 </head>
 <body>
-	<form>
+	<form enctype='multipart/form-data'>
 		<select name="select_multiple[]" multiple>
 			<option>opt 1</option>
 			<option>opt 2</option>
@@ -79,6 +79,8 @@
 		<input type="text" name="txt04[dup_interest_rating][]" value="1"><br/>
 		<br/>txt04[flag][]<br/>
 		<input type="text" name="txt04[flag][]" value="E"><br/>
+
+		<input type="file" name="file" />
 
 		<br/><br/><input type="submit">
 	</form>

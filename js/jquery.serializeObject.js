@@ -69,13 +69,12 @@
 
     Plugin.prototype.stringArrayKeyToVariable = function(stringVars, value) {
         var _this = this;
-        var stringVars = stringVars.reverse();
 
         var variable;
         if (stringVars.length > 0) {
-            var stringVar = stringVars.pop().trim();
+            var stringVar = stringVars.shift().trim();
             variable = (isNaN(stringVar) && stringVar != "") ? {} : [];
-            variable[stringVar] = (stringVars.length > 0) ? _this.stringArrayKeyToVariable(stringVars.reverse(), value) : value;
+            variable[stringVar] = (stringVars.length > 0) ? _this.stringArrayKeyToVariable(stringVars, value) : value;
         }
 
         return variable;
